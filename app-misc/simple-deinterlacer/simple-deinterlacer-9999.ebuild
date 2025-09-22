@@ -9,7 +9,7 @@ inherit git-r3
 
 DESCRIPTION="A simple bash script to deinterlace any video file using ffmpeg"
 HOMEPAGE="https://github.com/astrolul/simple-deinterlacer"
-SRC_URI="https://github.com/astrolul/simple-deinterlacer.git"
+EGIT_REPO_URI="https://github.com/astrolul/simple-deinterlacer.git"
 
 SLOT="0"
 KEYWORDS=""
