@@ -7,6 +7,8 @@ EAPI=8
 
 inherit git-r3
 
+PROPERTIES="live"
+
 DESCRIPTION="A simple bash script to deinterlace any video file using ffmpeg"
 HOMEPAGE="https://github.com/astrolul/simple-deinterlacer"
 EGIT_REPO_URI="https://github.com/astrolul/simple-deinterlacer.git"
@@ -23,9 +25,8 @@ RDEPEND="
 DEPEND="${RDEPEND}"
 
 src_unpack() {
-    # git-r3 should handle the clone; make sure script is executable
-    default
-    dodir "${WORKDIR}"
+    # Clone the Git repo into ${WORKDIR}/${P} (automatically S)
+    git-r3_src_unpack
 }
 
 src_install() {
