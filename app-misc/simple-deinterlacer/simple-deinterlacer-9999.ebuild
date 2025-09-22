@@ -22,7 +22,7 @@ RDEPEND="
 
 DEPEND="${RDEPEND}"
 
-S=${P}
+S="${WORKDIR}/${PN}"
 
 src_unpack() {
     # git-r3 should handle the clone; make sure script is executable
