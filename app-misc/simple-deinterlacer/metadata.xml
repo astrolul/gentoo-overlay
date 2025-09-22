@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>85197489+astrolul@users.noreply.github.com</email>
+		<name>astrolul</name>
+	</maintainer>
+    <longdescription lang="en">
+      VSCodium is a community-driven, freely-licensed binary distribution of Microsoft’s editor VSCode
+    </longdescription>
+    <upstream>
+	  <remote-id type="github">astrolul/simple-deinterlacer</remote-id>
+	  <bugs-to>https://github.com/astrolul/simple-deinterlacer/issues</bugs-to>
+    </upstream>
+</pkgmetadata>

@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<repositories version="1.0">
+  <repo quality="experimental" status="unofficial">
+    <name>astrolul</name>
+      <description lang="en">astrolul's Custom Gentoo Overlay.</description>
+        <homepage>https://github.com/astrolul/gentoo-overlay</homepage>
+        <owner type="person">
+            <name>astrolul</name>
+            <email>85197489+astrolul@users.noreply.github.com</email>
+        </owner>
+        <source type="git">git://github.com/astrolul/gentoo-overlay.git</source>
+		<feed>https://github.com/astrolul/gentoo-overlay/commits/master.atom</feed>
+  </repo>
+</repositories>
