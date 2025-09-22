@@ -30,21 +30,8 @@ src_unpack() {
 }
 
 src_install() {
-    # Install the bash script so it is runnable by user
-    # The upstream script is simple-deinterlacer.sh, we'll install it as simple-deinterlacer
-    dodir /usr/bin
-    # make sure script has executable permissions
-    dobin simple-deinterlacer.sh
-
-    # Optionally rename so user doesn't need .sh suffix
-    # We can install with a wrapper or symlink
-    # Method 1: directly copy as simple-deinterlacer
-    # Using dosym or cp; but better to install with dobin, then rename.
-
-    # Let's install renamed script:
-    dodir /usr/bin
-    # Remove extension
-    doexe simple-deinterlacer.sh /usr/bin/simple-deinterlacer
+    # Install with desired name, stripping .sh suffix
+    newbin simple-deinterlacer.sh simple-deinterlacer
 }
 
 pkg_postinst() {
