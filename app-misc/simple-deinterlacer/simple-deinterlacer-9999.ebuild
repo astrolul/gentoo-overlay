@@ -19,7 +19,7 @@ IUSE=""
 
 RDEPEND="
     >=app-shells/bash-4
-    media-video/ffmpeg
+    media-video/ffmpeg[sdl]
 "
 
 DEPEND="${RDEPEND}"
