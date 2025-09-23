@@ -1,8 +1,6 @@
 # dev-libs/libmpeghe/libmpegh-1.6.ebuild
 EAPI=8
 
-inherit git-r3
-
 DESCRIPTION="MPEG-H 3D Audio Low Complexity Profile decoder (libmpegh)"
 HOMEPAGE="https://github.com/ittiam-systems/libmpegh"
 SRC_URI="https://github.com/ittiam-systems/libmpegh/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
