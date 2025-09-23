@@ -14,10 +14,10 @@ IUSE=""
 
 # build-time deps
 DEPEND="
-    dev-util/cmake
+    dev-build/cmake
     sys-devel/gcc
-    sys-devel/make
-    app-misc/pkgconfig
+    dev-build/make
+    dev-util/pkgconf
 "
 
 # minimal runtime deps (library is self-contained upstream)
