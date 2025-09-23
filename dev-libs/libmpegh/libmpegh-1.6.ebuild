@@ -64,6 +64,13 @@ src_install() {
             ;;
     esac
 
+    # Install decoder executable (testbench)
+    if [[ -x "${BUILD_DIR}/ia_mpeghd_testbench" ]]; then
+        dobin "${BUILD_DIR}/ia_mpeghd_testbench" || die "Failed to install decoder binary"
+    else
+        ewarn "No testbench executable found — check build logs"
+    fi
+
     # Find headers robustly (don't rely on a single glob)
     einfo "Searching source tree (${S}) for public headers..."
     # Prefer decoder headers first (upstream docs list 'impeghd_*.h').
