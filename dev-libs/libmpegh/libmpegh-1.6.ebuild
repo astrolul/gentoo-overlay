@@ -27,17 +27,18 @@ src_prepare() {
     cmake_src_prepare
 }
 
-src_configure() {
-    # Use default CMake configuration (no special flags needed for core library)
-    cmake_src_configure
-}
-
 src_compile() {
     cmake_src_compile
 }
 
 src_install() {
-    cmake_src_install
-    # Install documentation and license
+    # manually install built library
+    dolib.so "${BUILD_DIR}/libmpeghdec.so" || die "missing libmpeghdec.so"
+
+    # install headers
+    insinto /usr/include/libmpegh
+    doins decoder/include/*.h || die
+
+    # docs
     dodoc README.md LICENSE
 }
