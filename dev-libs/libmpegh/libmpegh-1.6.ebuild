@@ -27,27 +27,13 @@ src_prepare() {
     cmake_src_prepare
 }
 
-src_configure() {
-    # Optionally enable LC_LEVEL_4 if desired; default is level 3
-    cmake_src_configure -DLC_LEVEL_4=OFF
-}
-
 src_compile() {
     cmake_src_compile
 }
 
 src_install() {
-    # Expected shared library name from upstream
-    local lib_shared="${BUILD_DIR}/decoder/lib/libMpeghDec.so"
-    local lib_static="${BUILD_DIR}/decoder/lib/libMpeghDecStatic.a"
-
-    if [[ -f "${lib_shared}" ]]; then
-        dolib.so "${lib_shared}" || die "Failed to install shared library"
-    elif [[ -f "${lib_static}" ]]; then
-        dolib.a "${lib_static}" || die "Failed to install static library"
-    else
-        die "No decoder library found in ${BUILD_DIR}/decoder/lib"
-    fi
+    # Install static library
+    dolib.a "${BUILD_DIR}/libia_mpeghd_lib.a" || die "Failed to install static library"
 
     # Install headers
     insinto /usr/include/libmpegh
