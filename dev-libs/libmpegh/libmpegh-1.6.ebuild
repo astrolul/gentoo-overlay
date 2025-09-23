@@ -24,7 +24,7 @@ DEPEND="
 RDEPEND="${DEPEND}"
 
 src_prepare() {
-    default
+    cmake_src_prepare
 }
 
 src_configure() {
