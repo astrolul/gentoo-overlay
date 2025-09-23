@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>85197489+astrolul@users.noreply.github.com</email>
+		<name>astrolul</name>
+	</maintainer>
+    <longdescription lang="en">
+	    MPEG-H 3D Audio Low Complexity Profile Decoder. Encoder: https://github.com/ittiam-systems/libmpeghe Contact: mob-audio@ittiam.com
+    </longdescription>
+    <upstream>
+	<remote-id type="github">ittiam-systems/libmpegh</remote-id>
+	  <bugs-to>https://github.com/ittiam-systems/libmpegh/issues</bugs-to>
+    </upstream>
+</pkgmetadata>
