@@ -1,13 +1,15 @@
 # dev-libs/libmpeghe/libmpegh-1.6.ebuild
 EAPI=8
 
+inherit git-r3
+
 DESCRIPTION="MPEG-H 3D Audio Low Complexity Profile decoder (libmpegh)"
 HOMEPAGE="https://github.com/ittiam-systems/libmpegh"
 SRC_URI="https://github.com/ittiam-systems/libmpegh/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 
 LICENSE="BSD-3-Clause-Clear"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64"
 IUSE=""
 
 # build-time deps
@@ -20,8 +22,6 @@ DEPEND="
 
 # minimal runtime deps (library is self-contained upstream)
 RDEPEND="${DEPEND}"
-
-inherit git-r3
 
 # prefer to use a private build dir for out-of-source CMake builds
 src_configure() {
